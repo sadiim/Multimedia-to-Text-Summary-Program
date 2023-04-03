@@ -1,5 +1,5 @@
 
-Welcome to Multimedia-to-Text-Summary-Program Documentation!
+Welcome to Multimedia-to-Text-Summary-Program!
 ===========================================================
 
 
