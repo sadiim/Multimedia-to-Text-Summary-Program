@@ -1,63 +1,54 @@
-from veritabani import *
+from database import *
 
 
 def print_menu():
     print("""
-    1-Giris Yap
-    2-Kayıt ol
-    3-Kapat""")
+    1-Log in
+    2-Sign up
+    3-Exit""")
 
 def login_menu(user):
     print("""
     {user[1]} {user[2]} {user[3]}
     
-    1-kullanici arama
-    2-tüm kullanicilari yazdir
-    3-hesabımı sil
-    4-çıkış yap
+    1-Video link
+    2-Article link
+    3-Soundcloud link
+    4-Exit
     """)
-
-
 
 while True:
     print_menu()
-    secim=input("Secim :")
-    if secim == "1":
-        username = input("Kullanici adi : ")
-        password = input("Sifre : ")
+    choice1=input("> ")
+
+    if  choice1 == "1":
+        username = input("Username : ")
+        password = input("Password : ")
         search = search_username(username)
-        if search==None:
-            print("Boyle bir kullanici yok")
+        if search is None:
+            print("No such user exists. ")
             continue
-        if password==search[4]:
-            while True:
-                login_menu(search)
-                secim=input("secim:")
-                if secim =="1":
-                    u=input("kullanici adi ")
-                    birisi =search_username(u)
-                    if birisi == None:
-                        print("kullanici bulunamadi")
-                        continue
-                    print(f"{birisi[1]}{birisi[2]}{birisi[3]}")
-                    if secim=="2":
-                        print_all
-                    if secim=="3":
-                        delete_account(username)
-                        break
-                    if secim=="4":
-                        break
-                    continue
+        elif password==search[4]:
+            login_menu(search)
+            choice2=input(">")
+            if choice2 =="1":
+                #video
+            elif choice2=="2":
+                #text
+            elif choice2=="3":
+                #soundcloud
+            elif choice2=="4":
+                break
+            continue
     
-    if secim=="2":
-        name=input("adiniz : ")
-        lastname = input("soyadiniz : ")
-        password= input ("sifreniz : ")
+    elif choice1=="2":
+        username=input("Username : ")
+        password= input ("Password : ")
         search=search_username(username)
-        if search != None:
-            print("Bu kullanici adi zaten var")
+        if search is not None:
+            print("This username already exists. ")
             continue
-        insert(name, lastname, username,password)
-        print("kayit basarili")
-    if secim == "3":
+        insert(username,password)
+        print("Successfully signed up!")
+    elif choice1 == "3":
         break
