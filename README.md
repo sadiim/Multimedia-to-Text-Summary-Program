@@ -1,7 +1,7 @@
 <h3 align="center">
 Welcome to Multimedia-to-Text-Summary-Program!
 <p align="right">
-  <a rel="noreferrer"><img src="https://user-images.githubusercontent.com/99951322/230460142-02765c9d-6242-4f9f-8eb0-1ae0e51c84a1.png" alt="my banner"></a>
+  <a rel="noreferrer"><img src="https://user-images.githubusercontent.com/99951322/230460687-dcc002d1-22c5-4286-bc2b-73dc689d6f27.png" alt="my banner"></a>
 </p>
   </a> 
 </h3>
