@@ -46,7 +46,7 @@ btn.place(x=145, y=200)
 
 scroll_bar = Scrollbar(root)
 scroll_bar.pack( side = RIGHT, fill = Y )
-textBox = Text( width=40, height=15, x=150, y=210,yscrollcommand=scroll_bar.set)
+textBox = Text( width=40, height=15, x=150, y=210, yscrollcommand=scroll_bar.set)
 textBox.pack(side=BOTTOM)
 
 root.mainloop()

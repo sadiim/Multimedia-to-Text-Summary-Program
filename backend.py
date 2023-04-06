@@ -8,7 +8,6 @@ def connect():
     conn.commit()
     conn.close()
 
-
 def insert(video_url, text_url, audio_url):
     conn = sqlite3.connect('data1.db')
     cur = conn.cursor()
@@ -16,7 +15,6 @@ def insert(video_url, text_url, audio_url):
                 (video_url, text_url, audio_url))
     conn.commit()
     conn.close()
-
 
 def view():
     conn = sqlite3.connect('data1.db')
@@ -26,7 +24,6 @@ def view():
     conn.commit()
     conn.close()
     return rows
-
 
 def delete(idx):
     conn = sqlite3.connect('data1.db')
